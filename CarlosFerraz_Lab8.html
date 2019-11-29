@@ -1,0 +1,107 @@
+<!--
+Name:		
+Date:		November 2019
+Purpose:    Lab 8 - Waste Calculator
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Lab 8</title>
+        
+        <script src="Product.js"></script>
+        <script src="main.js"></script>
+        
+	</head>
+    <body onload="displayProducts(); calculateWaste();">
+        
+        <h1>Grocery Store Waste Tracker</h1>
+		
+		<!-- Inventory -->
+		<fieldset>
+			<legend>Store Inventory</legend>
+			<form>
+                <!-- Filter-->
+				<p>
+                    Filter Products By:
+                    <select id="sbProductsFilter" onchange="displayProducts();">
+                        <option selected>All</option>
+                        <option>Expired</option>
+                        <option>Not Expired</option>
+                    </select>
+                </p>
+
+                <!-- Products Output -->
+                <span><strong>Department | Product | Price ($) | Shelf Life</strong></span>
+                <div id="productOutput">[Print Products here...]</div>
+			</form>
+        </fieldset>
+        <br>
+
+        <!-- Waste Calculator -->
+		<fieldset>
+			<legend>Waste Calculator</legend>
+			<form>
+                <!-- Filter -->
+				<p>
+                    Calculate Waste By Department:
+                    <select id="sbDepartmentFilter" onchange="calculateWaste();">
+                        <option selected>Entire Store</option>
+                        <option>Bakery</option>
+                        <option>Dairy</option>
+                        <option>Deli</option>
+                        <option>Produce</option>
+                        <option>Vegan</option>
+                    </select>
+                </p>
+
+                <!-- Products Output -->
+                <div id="wasteOutput">[Select a department]</div>
+			</form>
+		</fieldset>
+		
+        <!-- Javascript -->
+        <script>
+            // TODO: Constructor function and methods...
+
+
+
+
+            
+            // Global array
+            var products = [];
+
+            // Some products
+            products.push( new Product( "Avacados",             "Produce" ,     8.99,       new Date("June 27, 2019") ) );
+            products.push( new Product( "Baguette",             "Bakery" ,      5.99,       new Date("July 30, 2019") ) );
+            products.push( new Product( "Beef",                 "Deli" ,        14.99,      new Date("April 1, 2019") ) );
+            products.push( new Product( "Pears",                "Produce" ,     5.50,       new Date("April 2, 2019") ) );
+            products.push( new Product( "2L Chocolate Milk",    "Dairy" ,       4.99,       new Date("March 21, 2019") ) );
+            products.push( new Product( "Pumpkin Pie",          "Bakery" ,      10.50,      new Date("March 13, 2019") ) );
+            products.push( new Product( "Grapes",               "Produce" ,     6.99,       new Date("February 1, 2018") ) );
+            products.push( new Product( "Loaf of Bread",        "Bakery" ,      5.99,       new Date("March 30, 2019") ) );
+            products.push( new Product( "Cheddar Cheese",       "Dairy" ,       10.99,      new Date("March 14, 2019") ) );
+            products.push( new Product( "Margarine",            "Dairy" ,       8.99,       new Date("June 14, 2017") ) );
+            products.push( new Product( "Salami",               "Deli" ,        5.99,       new Date("March 13, 2019") ) );
+            products.push( new Product( "Oranges",              "Produce" ,     7.50,       new Date("May 2, 2019") ) );
+            products.push( new Product( "Chicken",              "Deli" ,        21.99,      new Date("March 22, 2019") ) );
+            products.push( new Product( "Turkey",               "Deli" ,        14.99,      new Date("April 3, 2019") ) );
+            products.push( new Product( "Peppers",              "Produce" ,     3.99,       new Date("March 27, 2019") ) );
+            products.push( new Product( "Ham",                  "Deli" ,        9.99,       new Date("May 5, 2019") ) );
+            products.push( new Product( "Chocolate Cake",       "Bakery" ,      19.99,      new Date("October 10, 2007") ) ); // The Cake is a Lie!
+            products.push( new Product( "10kg White Flour",     "Bakery" ,      12.99,      new Date("September 30, 2020") ) );
+
+
+
+            // TODO: displayProducts() function... 
+
+
+
+
+            // TODO: calculateWaste() function... 
+
+
+
+
+        </script>
+	</body>
+</html>
